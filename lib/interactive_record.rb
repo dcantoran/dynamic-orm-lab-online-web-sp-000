@@ -1,5 +1,6 @@
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
+require 'pry'
 
 class InteractiveRecord
   def self.table_name
@@ -60,7 +61,8 @@ class InteractiveRecord
   end 
   
   def self.find_by(attr)
-    DB[:conn].execute("SELECT #{self} FROM #{self.table_name} WHERE attr = ?", attr)
+    attr_key = attr.keys.join
+    binding.pry
   end 
   
 end
