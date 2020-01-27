@@ -62,6 +62,7 @@ class InteractiveRecord
   
   def self.find_by(attr)
     attr_key = attr.keys.join
+    attr_val = attr.values
     binding.pry
   end 
   
