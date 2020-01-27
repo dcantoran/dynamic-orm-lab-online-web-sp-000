@@ -16,10 +16,10 @@ class InteractiveRecord
     col_names = []
     
     table_info.each do |row|
-      col_names << row["names"]
+      col_names << row["name"]
     end 
     
-    
+    col_names.compact
     
   end 
   
