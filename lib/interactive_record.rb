@@ -19,7 +19,6 @@ class InteractiveRecord
     end 
     
     col_names.compact
-    
   end 
   
 end
