@@ -64,9 +64,8 @@ class InteractiveRecord
     attr_key = attr.keys.join
     attr_val = attr.values.join
     
-    sql = "SELECT * FROM #{self.table_name} WHERE #{attr_key} = #{attr_val}"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{attr_key} = #{attr_val} LIMIT 1"
     row = DB[:conn].execute(sql)
-    binding.pry
   end 
   
 end
